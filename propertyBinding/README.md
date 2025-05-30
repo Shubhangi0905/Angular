@@ -21,7 +21,7 @@ This folder contains:
 
 **Example:**
 
-```html```
+html
 ```<p>{{ userName }}</p>```
 
 ### Property Binding ([ ])
@@ -42,7 +42,7 @@ html
 
 **Example:**
 
-<pre>```html
+<pre>html
 <img [src]="imageUrl" alt="Dynamic Image">```</pre>
 
 ## ❓ Interview Questions & Answers
