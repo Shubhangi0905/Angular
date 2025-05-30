@@ -21,8 +21,8 @@ This folder contains:
 
 **Example:**
 
-html
-<prev>  <p>{{ userName }}</p> </prev>
+```html```
+```<p>{{ userName }}</p>```
 
 ### Property Binding ([ ])
 
@@ -33,8 +33,8 @@ Property binding allows setting DOM element properties using component values. I
   
 **Example:**
 
-<pre>```html
-<button [disabled]="isDisabled">Submit</button>```</pre>
+html
+```<button [disabled]="isDisabled">Submit</button>```
 
 ##Binding with <img> Tags
 
