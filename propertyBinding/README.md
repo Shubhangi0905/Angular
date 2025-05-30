@@ -61,7 +61,7 @@ Yes. You can bind attributes using the attr. prefix in property binding.
 
 Example:
 
-<pre>```html
+<pre>html
 <button [attr.aria-label]="ariaLabelText">Click me</button>```</pre>
 
 This binds the aria-label attribute to the ariaLabelText property in the component.
