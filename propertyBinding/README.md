@@ -21,7 +21,9 @@ This folder contains:
 
 **Example:**
 
-```<p>{{ userName }}</p>```
+```
+<p>{{ userName }}</p>
+```
 
 ### Property Binding ([ ])
 
@@ -33,7 +35,9 @@ Property binding allows setting DOM element properties using component values. I
 **Example:**
 
 
-```<button [disabled]="isDisabled">Submit</button>```
+```
+<button [disabled]="isDisabled">Submit</button>
+```
 
 ##Binding with <img> Tags
 
@@ -41,7 +45,9 @@ Property binding allows setting DOM element properties using component values. I
 
 **Example:**
 
-```<img [src]="imageUrl" alt="Dynamic Image">```
+```
+<img [src]="imageUrl" alt="Dynamic Image">
+```
 
 ## ❓ Interview Questions & Answers
 
@@ -59,7 +65,9 @@ Yes. You can bind attributes using the attr. prefix in property binding.
 
 Example:
 
-```<button [attr.aria-label]="ariaLabelText">Click me</button>```
+```
+<button [attr.aria-label]="ariaLabelText">Click me</button>
+```
 
 This binds the aria-label attribute to the ariaLabelText property in the component.
 
@@ -71,13 +79,11 @@ Using interpolation for boolean attributes converts the value to a string, which
 
 ```Incorrect:
 
-html
 <!-- 'true' is a string -->
 <button disabled="{{ isDisabled }}">Submit</button>
 ```
 ```Correct:
 
-html
 <!-- isDisabled is a boolean -->
 <button [disabled]="isDisabled">Submit</button>
 ```
@@ -92,7 +98,7 @@ While you can't bind multiple properties simultaneously in a single statement, y
 
 Example:
 
-```html
+```
 <input [value]="userName" [disabled]="isDisabled" [attr.maxlength]="maxLength" />
 ```
 
