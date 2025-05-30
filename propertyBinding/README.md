@@ -4,7 +4,7 @@ This directory contains Angular examples that demonstrate the concept of **Prope
 
 ---
 
-###This folder contains:
+This folder contains:
 
 - Examples of **property binding**
 - Comparison between **interpolation** and **property binding**
@@ -21,8 +21,8 @@ This directory contains Angular examples that demonstrate the concept of **Prope
 
 **Example:**
 
-<pre>```html
-<p>{{ userName }}</p>```</pre>
+html
+<prev>  <p>{{ userName }}</p>
 
 ### Property Binding ([ ])
 
@@ -45,7 +45,7 @@ Property binding allows setting DOM element properties using component values. I
 <pre>```html
 <img [src]="imageUrl" alt="Dynamic Image">```</pre>
 
-##❓ Interview Questions & Answers
+## ❓ Interview Questions & Answers
 
 **1. What is the difference between interpolation and property binding?**
 
@@ -98,7 +98,7 @@ Example:
 
 Each property is bound separately, allowing for dynamic and flexible templates.
 
-##✅ Summary
+## ✅ Summary
 
 This repo is a personal learning space for mastering Angular fundamentals, with a focus on:
 
@@ -106,7 +106,7 @@ This repo is a personal learning space for mastering Angular fundamentals, with 
 -Real interview preparation
 -Hands-on examples with actual Angular code
 
-##📌 Upcoming Topics
+## 📌 Upcoming Topics
 
 -Event binding
 -Two-way data binding
