@@ -1,4 +1,4 @@
-# Angular Practice Repository
+# Prperty Binding
 
 This repository contains practice code and interview Q&A based on concepts learned while studying Angular. The folder `Property Binding` includes hands-on examples demonstrating various property binding techniques in Angular.
 
@@ -41,14 +41,14 @@ Good for text/labels	Good for dynamic element props
 
 Example:
 
-```html
+html
 Copy
 Edit
 <!-- Interpolation -->
 <img src="{{ imageUrl }}">
 
 <!-- Property Binding -->
-<img [src]="imageUrl">```
+<img [src]="imageUrl">
 🔹 Attribute Binding
 Q2: Can you bind a DOM element’s attribute using property binding?
 Answer:
@@ -56,15 +56,15 @@ Yes, use the attr. prefix for non-standard attributes.
 
 Example:
 
-```html
+html
 Copy
 Edit
-<button [attr.aria-label]="ariaLabelText">Click me</button>```
+<button [attr.aria-label]="ariaLabelText">Click me</button>
 🔹 Boolean Attribute Binding
 Q3: What happens if you use interpolation for boolean attributes?
 Answer:
 Interpolation treats booleans as strings ("true", "false"), which may break expected behavior.
-<pre>```
+
 Incorrect (interpolation):
 
 html
@@ -74,8 +74,9 @@ Edit
 Correct (property binding):
 
 html
+Copy
+Edit
 <input type="checkbox" [checked]="isChecked">
-```</pre>
 🔹 Binding Multiple Properties
 Q4: Can you bind multiple properties at once?
 Answer:
@@ -83,28 +84,26 @@ Not in a single binding statement, but you can bind multiple properties individu
 
 Example:
 
-<pre>```html
-<img [src]="imageUrl" [alt]="imageAlt" [width]="imgWidth" [height]="imgHeight">```</pre>
-
+html
+Copy
+Edit
+<img [src]="imageUrl" [alt]="imageAlt" [width]="imgWidth" [height]="imgHeight">
 ✅ Summary
-
 This repo is a personal learning space for mastering Angular fundamentals, with a focus on:
 
--Clean, modular folder structure
+Clean, modular folder structure
 
--Real interview preparation
+Real interview preparation
 
--Hands-on examples with actual Angular code
+Hands-on examples with actual Angular code
 
 📌 Upcoming Topics
+Event binding
 
--Event binding
+Two-way data binding
 
--Two-way data binding
+Directives and structural bindings
 
--Directives and structural bindings
+Component communication
 
--Component communication
-
--Routing and lazy loading
-
+Routing and lazy loading
