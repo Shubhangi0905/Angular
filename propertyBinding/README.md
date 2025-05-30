@@ -1,63 +1,110 @@
-<<<<<<< HEAD
-# PropertyBinding
+# Angular Practice Repository
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+This repository contains practice code and interview Q&A based on concepts learned while studying Angular. The folder `Property Binding` includes hands-on examples demonstrating various property binding techniques in Angular.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📁 Folder: `Property Binding`
 
-```bash
-ng serve
-```
+This folder contains:
+- Examples of **property binding**
+- Comparison between **interpolation** and **property binding**
+- Usage of **image tags with property binding**
+- Scenarios demonstrating **boolean attribute binding**
+- Common **interview questions and answers**
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🔍 Concepts Covered
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🔹 Property Binding
 
-```bash
-ng generate component component-name
-```
+Property binding allows setting DOM element properties using component values. It's useful when:
+- Binding non-string values (like booleans, numbers, objects)
+- Dynamically assigning paths (e.g., to an image tag)
+- Toggling features via true/false
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**Example:**
+```html
+<img [src]="imageUrl">
+🔹 Interpolation vs Property Binding
+Q1: What’s the difference between interpolation and property binding?
+Answer:
 
-```bash
-ng generate --help
-```
+Interpolation ({{ }}) always converts values to strings.
 
-## Building
+Property binding ([property]="value") binds the actual data type (boolean, number, object, etc.).
 
-To build the project run:
+Interpolation	Property Binding
+Always outputs a string	Preserves original data type
+Good for text/labels	Good for dynamic element props
 
-```bash
-ng build
-```
+Example:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+```html
+Copy
+Edit
+<!-- Interpolation -->
+<img src="{{ imageUrl }}">
 
-## Running unit tests
+<!-- Property Binding -->
+<img [src]="imageUrl">```
+🔹 Attribute Binding
+Q2: Can you bind a DOM element’s attribute using property binding?
+Answer:
+Yes, use the attr. prefix for non-standard attributes.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Example:
 
-```bash
-ng test
-```
+```html
+Copy
+Edit
+<button [attr.aria-label]="ariaLabelText">Click me</button>```
+🔹 Boolean Attribute Binding
+Q3: What happens if you use interpolation for boolean attributes?
+Answer:
+Interpolation treats booleans as strings ("true", "false"), which may break expected behavior.
+<pre>```
+Incorrect (interpolation):
 
-## Running end-to-end tests
+html
+Copy
+Edit
+<input type="checkbox" checked="{{ isChecked }}">
+Correct (property binding):
 
-For end-to-end (e2e) testing, run:
+html
+<input type="checkbox" [checked]="isChecked">
+```</pre>
+🔹 Binding Multiple Properties
+Q4: Can you bind multiple properties at once?
+Answer:
+Not in a single binding statement, but you can bind multiple properties individually on the same element.
 
-```bash
-ng e2e
-```
+Example:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+<pre>```html
+<img [src]="imageUrl" [alt]="imageAlt" [width]="imgWidth" [height]="imgHeight">```</pre>
 
-## Additional Resources
+✅ Summary
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# Angular
->>>>>>> 731091cb5c0a9a1b05b0eaaf63590cd7a8f5e049
+This repo is a personal learning space for mastering Angular fundamentals, with a focus on:
+
+-Clean, modular folder structure
+
+-Real interview preparation
+
+-Hands-on examples with actual Angular code
+
+📌 Upcoming Topics
+
+-Event binding
+
+-Two-way data binding
+
+-Directives and structural bindings
+
+-Component communication
+
+-Routing and lazy loading
+
