@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PropertyBinding
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# Angular
+>>>>>>> 731091cb5c0a9a1b05b0eaaf63590cd7a8f5e049
