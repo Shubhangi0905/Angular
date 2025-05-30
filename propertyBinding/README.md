@@ -22,7 +22,7 @@ This folder contains:
 **Example:**
 
 html
-<prev>  <p>{{ userName }}</p>
+<prev>  <p>{{ userName }}</p> </prev>
 
 ### Property Binding ([ ])
 
