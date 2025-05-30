@@ -1,17 +1,42 @@
-📁 Property Binding in Angular
-This directory contains Angular examples that demonstrate the concept of Property Binding, including its usage with various HTML elements and a comparison with interpolation.
+# 📁 Property Binding in Angular
 
-🧠 Key Concepts
-Interpolation ({{ }})
-Used to bind component data to the template.
+This directory contains Angular examples that demonstrate the concept of **Property Binding**, including its usage with various HTML elements and a comparison with interpolation.
 
-Automatically converts data to strings.
+---
 
-Example:
+## 📂 Folder Structure
 
-html
+propertyBinding/
+├── interpolation-example/
+│ ├── interpolation-example.component.ts
+│ ├── interpolation-example.component.html
+│ └── interpolation-example.component.css
+├── property-binding-example/
+│ ├── property-binding-example.component.ts
+│ ├── property-binding-example.component.html
+│ └── property-binding-example.component.css
+├── img-tag-binding/
+│ ├── img-tag-binding.component.ts
+│ ├── img-tag-binding.component.html
+│ └── img-tag-binding.component.css
+└── README.md
+
+yaml
 Copy
 Edit
+
+---
+
+## 🧠 Key Concepts
+
+### Interpolation (`{{ }}`)
+
+- Used to bind component data to the template.
+- Automatically converts data to strings.
+
+**Example:**
+
+```html
 <p>{{ userName }}</p>
 Property Binding ([ ])
 Binds component data to DOM properties.
@@ -85,17 +110,4 @@ Copy
 Edit
 <input [value]="userName" [disabled]="isDisabled" [attr.maxlength]="maxLength" />
 Each property is bound separately, allowing for dynamic and flexible templates.
-
-code
-
-📌 Upcoming Topics
-Event binding
-
-Two-way data binding
-
-Directives and structural bindings
-
-Component communication
-
-Routing and lazy loading
 
