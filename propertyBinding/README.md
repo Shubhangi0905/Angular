@@ -1,58 +1,48 @@
-# Prperty Binding
+📁 Property Binding in Angular
+This directory contains Angular examples that demonstrate the concept of Property Binding, including its usage with various HTML elements and a comparison with interpolation.
 
-This repository contains practice code and interview Q&A based on concepts learned while studying Angular. The folder `Property Binding` includes hands-on examples demonstrating various property binding techniques in Angular.
+🧠 Key Concepts
+Interpolation ({{ }})
+Used to bind component data to the template.
 
----
-
-## 📁 Folder: `Property Binding`
-
-This folder contains:
-- Examples of **property binding**
-- Comparison between **interpolation** and **property binding**
-- Usage of **image tags with property binding**
-- Scenarios demonstrating **boolean attribute binding**
-- Common **interview questions and answers**
-
----
-
-## 🔍 Concepts Covered
-
-### 🔹 Property Binding
-
-Property binding allows setting DOM element properties using component values. It's useful when:
-- Binding non-string values (like booleans, numbers, objects)
-- Dynamically assigning paths (e.g., to an image tag)
-- Toggling features via true/false
-
-**Example:**
-```html
-<img [src]="imageUrl">
-🔹 Interpolation vs Property Binding
-Q1: What’s the difference between interpolation and property binding?
-Answer:
-
-Interpolation ({{ }}) always converts values to strings.
-
-Property binding ([property]="value") binds the actual data type (boolean, number, object, etc.).
-
-Interpolation	Property Binding
-Always outputs a string	Preserves original data type
-Good for text/labels	Good for dynamic element props
+Automatically converts data to strings.
 
 Example:
 
 html
 Copy
 Edit
-<!-- Interpolation -->
-<img src="{{ imageUrl }}">
+<p>{{ userName }}</p>
+Property Binding ([ ])
+Binds component data to DOM properties.
 
-<!-- Property Binding -->
-<img [src]="imageUrl">
-🔹 Attribute Binding
-Q2: Can you bind a DOM element’s attribute using property binding?
+Maintains the original data type (e.g., boolean, number).
+
+Example:
+
+html
+Copy
+Edit
+<button [disabled]="isDisabled">Submit</button>
+Binding with <img> Tags
+Demonstrates dynamic binding of image sources.
+
+Example:
+
+html
+Copy
+Edit
+<img [src]="imageUrl" alt="Dynamic Image">
+❓ Interview Questions & Answers
+1. What is the difference between interpolation and property binding?
 Answer:
-Yes, use the attr. prefix for non-standard attributes.
+
+Interpolation ({{ }}) is used to bind data to the template and always converts the data to a string. Property binding ([ ]) binds data to DOM properties and preserves the data type. For instance, binding a boolean value should use property binding to maintain its boolean nature.
+
+2. Can you bind a DOM element's attribute using property binding?
+Answer:
+
+Yes. You can bind attributes using the attr. prefix in property binding.
 
 Example:
 
@@ -60,42 +50,43 @@ html
 Copy
 Edit
 <button [attr.aria-label]="ariaLabelText">Click me</button>
-🔹 Boolean Attribute Binding
-Q3: What happens if you use interpolation for boolean attributes?
-Answer:
-Interpolation treats booleans as strings ("true", "false"), which may break expected behavior.
+This binds the aria-label attribute to the ariaLabelText property in the component.
 
-Incorrect (interpolation):
+3. What happens if you use interpolation instead of property binding for a boolean attribute?
+Answer:
+
+Using interpolation for boolean attributes converts the value to a string, which may not have the desired effect.
+
+Incorrect:
 
 html
 Copy
 Edit
-<input type="checkbox" checked="{{ isChecked }}">
-Correct (property binding):
+<!-- 'true' is a string -->
+<button disabled="{{ isDisabled }}">Submit</button>
+Correct:
 
 html
 Copy
 Edit
-<input type="checkbox" [checked]="isChecked">
-🔹 Binding Multiple Properties
-Q4: Can you bind multiple properties at once?
+<!-- isDisabled is a boolean -->
+<button [disabled]="isDisabled">Submit</button>
+In the incorrect example, the button may not behave as expected because the disabled attribute receives a string instead of a boolean.
+
+4. Can you bind multiple properties at once? If so, how?
 Answer:
-Not in a single binding statement, but you can bind multiple properties individually on the same element.
+
+While you can't bind multiple properties simultaneously in a single statement, you can bind multiple properties individually on the same element.
 
 Example:
 
 html
 Copy
 Edit
-<img [src]="imageUrl" [alt]="imageAlt" [width]="imgWidth" [height]="imgHeight">
-✅ Summary
-This repo is a personal learning space for mastering Angular fundamentals, with a focus on:
+<input [value]="userName" [disabled]="isDisabled" [attr.maxlength]="maxLength" />
+Each property is bound separately, allowing for dynamic and flexible templates.
 
-Clean, modular folder structure
-
-Real interview preparation
-
-Hands-on examples with actual Angular code
+code
 
 📌 Upcoming Topics
 Event binding
@@ -107,3 +98,4 @@ Directives and structural bindings
 Component communication
 
 Routing and lazy loading
+
